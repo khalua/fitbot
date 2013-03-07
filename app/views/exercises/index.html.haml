@@ -1,0 +1,14 @@
+.large-5.columns
+  %form.custom
+    = select_tag 'Activities', options_for_select(@activities.map{ |a| [a, a] }), :class => 'medium', :id => 'customDropdown'
+  %br
+  = button_tag 'Chart', :class => 'button radius tiny', :id => 'show_chart'
+
+  #chart
+
+
+  %ul.white#exercises
+    =# render(:partial => 'exercises')
+.large-7.columns
+  = link_to('Add', new_exercise_path, :remote=> true, :class => 'button radius tiny success')
+  #new_exercise
